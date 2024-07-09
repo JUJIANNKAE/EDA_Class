@@ -6,8 +6,9 @@ module sml_sin ();
     reg rst;
     wire [7:0] dataout;
 
-    singen U0 (
+    singen U1 (
         .clk    (clk_50M),
+        .rst    (rst),
         .dataout(dataout)
     );
 
