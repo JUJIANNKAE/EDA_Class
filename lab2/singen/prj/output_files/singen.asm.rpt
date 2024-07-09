@@ -1,5 +1,5 @@
 Assembler report for singen
-Tue Jul 09 14:33:32 2024
+Tue Jul 09 14:39:37 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jul 09 14:33:32 2024 ;
+; Assembler Status      ; Successful - Tue Jul 09 14:39:37 2024 ;
 ; Revision Name         ; singen                                ;
 ; Top-level Entity Name ; singen                                ;
 ; Family                ; Cyclone II                            ;
@@ -105,8 +105,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                 ;
 +----------------+-----------------------------------------------------------------------------------------+
 ; Device         ; EP2C70F896C6                                                                            ;
-; JTAG usercode  ; 0x0065BC39                                                                              ;
-; Checksum       ; 0x0065BC39                                                                              ;
+; JTAG usercode  ; 0x0065BBF9                                                                              ;
+; Checksum       ; 0x0065BBF9                                                                              ;
 +----------------+-----------------------------------------------------------------------------------------+
 
 
@@ -117,7 +117,7 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------------------------+
 ; Device             ; EPCS16                                                                              ;
 ; JTAG usercode      ; 0x00000000                                                                          ;
-; Checksum           ; 0x187316F1                                                                          ;
+; Checksum           ; 0x18758C55                                                                          ;
 ; Compression Ratio  ; 3                                                                                   ;
 +--------------------+-------------------------------------------------------------------------------------+
 
@@ -128,14 +128,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Jul 09 14:33:31 2024
+    Info: Processing started: Tue Jul 09 14:39:35 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off singen -c singen
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4570 megabytes
-    Info: Processing ended: Tue Jul 09 14:33:32 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4571 megabytes
+    Info: Processing ended: Tue Jul 09 14:39:37 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
