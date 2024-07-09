@@ -14,4 +14,14 @@ module DisCnt (
         end
     end
 
+    fdiv fd0 (
+        .iCLK_50(iCLK_50),
+        .oLEDR  (clk_1Hz)
+    );
+
+    SEG7_LUT hex0 (
+        .iDIG(cnt),
+        .oSEG(oHEX0_D)
+    );
+
 endmodule

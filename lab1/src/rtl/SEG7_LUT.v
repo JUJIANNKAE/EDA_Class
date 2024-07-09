@@ -1,6 +1,6 @@
 module SEG7_LUT (
-    input wire [3:0] iDIG,
-    output reg [6:0] oSEG,
+    input  wire [3:0] iDIG,
+    output reg  [6:0] oSEG
 );
 
     always @(iDIG) begin
