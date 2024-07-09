@@ -2,4 +2,82 @@ m255
 K3
 13
 cModel Technology
-dC:\altera\13.0sp1
+Z0 dC:\altera\13.0sp1
+vDisCnt
+Z1 !s100 k40]XmSjfjSf^Eko3CjQk1
+Z2 IUQ86?ZZQI`=4@<Xk_THDo2
+Z3 V:49lAdGg6heA<EnS`0bH`1
+Z4 dC:\Users\jk\Documents\DE2_70\EDA_Class\lab2\Lesson-sim
+Z5 w1720502835
+Z6 8C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/DisCnt.v
+Z7 FC:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/DisCnt.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/DisCnt.v|
+Z10 o-work work -O0
+Z11 n@dis@cnt
+Z12 !s108 1720502997.417000
+Z13 !s107 C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/DisCnt.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vfdiv
+Z14 IIn7WoAR2kYlL0zzN5<m=Y2
+Z15 V>BYP32m[92Hl97hi:k`2]3
+R4
+Z16 w1720502995
+Z17 8C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/fdiv.v
+Z18 FC:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/fdiv.v
+L0 1
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/fdiv.v|
+R10
+!i10b 1
+Z20 !s100 NbTDjl[hzEE?:k]oCZe9=1
+!s85 0
+Z21 !s108 1720502997.464000
+Z22 !s107 C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/fdiv.v|
+!s101 -O0
+vSEG7_LUT
+!i10b 1
+Z23 !s100 ?@J3c8i:5X_eWcdm24NWi1
+Z24 ID8=I11N9FCWinVEYM0g670
+Z25 VW>Fa4;_?NY]O9Z762_9lI0
+R4
+Z26 w1720500819
+Z27 8C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/SEG7_LUT.v
+Z28 FC:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/SEG7_LUT.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1720502997.496000
+!s107 C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/SEG7_LUT.v|
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/SEG7_LUT.v|
+!s101 -O0
+R10
+Z30 n@s@e@g7_@l@u@t
+vtest
+Z31 !s100 1aIOZm14dC81`cf^bYJm80
+Z32 IZ3JzPX=lnFe2WCSa2ILE63
+Z33 V]g6^aZoe0PnBWLV85f44]3
+R4
+R5
+Z34 8C:\Users\jk\Documents\DE2_70\EDA_Class\lab2\Lesson-sim\test-sim.v
+Z35 FC:\Users\jk\Documents\DE2_70\EDA_Class\lab2\Lesson-sim\test-sim.v
+L0 2
+R8
+r1
+31
+Z36 !s90 -reportprogress|300|-work|work|C:\Users\jk\Documents\DE2_70\EDA_Class\lab2\Lesson-sim\test-sim.v|
+R10
+Z37 !s108 1720502997.386000
+Z38 !s107 C:\Users\jk\Documents\DE2_70\EDA_Class\lab2\Lesson-sim\test-sim.v|
+!i10b 1
+!s85 0
+!s101 -O0

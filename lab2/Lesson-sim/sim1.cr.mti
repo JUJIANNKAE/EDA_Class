@@ -1,0 +1,29 @@
+C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/fdiv.v {1 {vlog -work work C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/fdiv.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module fdiv
+
+Top level modules:
+	fdiv
+
+} {} {}} C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/DisCnt.v {1 {vlog -work work C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/DisCnt.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module DisCnt
+
+Top level modules:
+	DisCnt
+
+} {} {}} C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/test-sim.v {1 {vlog -work work {C:\Users\jk\Documents\DE2_70\EDA_Class\lab2\Lesson-sim\test-sim.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/SEG7_LUT.v {1 {vlog -work work C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/Lesson-sim/SEG7_LUT.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SEG7_LUT
+
+Top level modules:
+	SEG7_LUT
+
+} {} {}}
