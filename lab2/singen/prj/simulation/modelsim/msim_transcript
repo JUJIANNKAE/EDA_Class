@@ -1,0 +1,51 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do singen_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/src/rtl {C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/src/rtl/singen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module singen
+# 
+# Top level modules:
+# 	singen
+# vlog -vlog01compat -work work +incdir+C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/src/ip {C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/src/ip/rom.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rom
+# 
+# Top level modules:
+# 	rom
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/prj/../src/sim {C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/prj/../src/sim/sml_sin.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sml_sin
+# 
+# Top level modules:
+# 	sml_sin
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  sml_sim
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps sml_sim 
+# ** Error: (vsim-3170) Could not find 'C:/Users/jk/Documents/DE2_70/EDA_Class/lab2/singen/prj/simulation/modelsim/rtl_work.sml_sim'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./singen_run_msim_rtl_verilog.do PAUSED at line 13
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L C:/altera/13.0sp1/modelsim_ase/altera/verilog/220model -voptargs=\"+acc\" -t 1ps work.sml_sin
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L C:/altera/13.0sp1/modelsim_ase/altera/verilog/220model -voptargs=\"+acc\" -t 1ps work.sml_sin 
+# Loading work.sml_sin
+# Loading work.singen
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/sml_sin/U1/*
+run -all
+# WARNING: No extended dataflow license exists
