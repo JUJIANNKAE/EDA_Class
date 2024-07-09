@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+`timescale 1ns / 1ns
 module test ();
 
     parameter DELAY = 200;
@@ -13,10 +13,16 @@ module test ();
     initial begin
         clk = 0;
         forever begin
-            #10 clk != clk;
+            #10 clk = !clk;
         end
     end
 
+    wire [6:0] Hex;
 
-    
+    DisCnt U0 (
+        .iCLK_50(clk),
+        .oHEX0_D(Hex)
+    );
+
 endmodule
+
