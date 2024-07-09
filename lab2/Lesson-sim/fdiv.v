@@ -11,7 +11,8 @@ module fdiv (
         if (!rst) begin
             count   <= 0;
             clk_1Hz <= 0;
-        end else if (count < 25000000) begin
+            // end else if (count < 25000000) begin
+        end else if (count < 25000) begin
             count <= count + 1;
         end else begin
             count   <= 1;
