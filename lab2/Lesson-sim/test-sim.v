@@ -21,6 +21,7 @@ module test ();
 
     DisCnt U0 (
         .iCLK_50(clk),
+        .rst    (rst),
         .oHEX0_D(Hex)
     );
 
