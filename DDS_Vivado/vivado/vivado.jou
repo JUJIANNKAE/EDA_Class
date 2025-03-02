@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Mar  2 10:10:54 2025
+# Process ID         : 29042
+# Current directory  : /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado
+# Command line       : vivado
+# Log file           : /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/vivado.log
+# Journal file       : /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/vivado.jou
+# Running On         : arch
+# Platform           : Arch
+# Operating System   : Arch Linux
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12600KF
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 33422 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 50602 MB
+# Available Virtual  : 48036 MB
+#-----------------------------------------------------------
+start_gui
+create_project DDS . -part xc7a35tcsg324-1
+file mkdir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new
+close [ open /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v w ]
+add_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v
+update_compile_order -fileset sources_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name rom
+set_property -dict [list \
+  CONFIG.Coe_File {/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {64} \
+  CONFIG.Write_Width_A {8} \
+] [get_ips rom]
+generate_target {instantiation_template} [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci]
+catch { config_ip_cache -export [get_ips -all rom] }
+export_ip_user_files -of_objects [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci]
+launch_runs rom_synth_1 -jobs 8
+wait_on_run rom_synth_1
+export_simulation -lib_map_path [list {modelsim=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/modelsim} {questa=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/questa} {xcelium=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/xcelium} {vcs=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/vcs} {riviera=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/riviera}] -of_objects [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci] -directory /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.ip_user_files/sim_scripts -ip_user_files_dir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.ip_user_files -ipstatic_source_dir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+file mkdir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v w ]
+add_files -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source tb_singen.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_singen/U1/clk}} {{/tb_singen/U1/rst}} {{/tb_singen/U1/dataout}} {{/tb_singen/U1/addr}} {{/tb_singen/U1/clka}} 
+relaunch_sim
+save_wave_config {/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg
+set_property xsim.view /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg [get_filesets sim_1]
+relaunch_sim
+save_wave_config {/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg}
+close_sim
+export_ip_user_files -of_objects  [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg
+remove_files  -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg

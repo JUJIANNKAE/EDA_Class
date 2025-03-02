@@ -1,0 +1,361 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Mar  2 10:10:54 2025
+# Process ID         : 29042
+# Current directory  : /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado
+# Command line       : vivado
+# Log file           : /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/vivado.log
+# Journal file       : /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/vivado.jou
+# Running On         : arch
+# Platform           : Arch
+# Operating System   : Arch Linux
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12600KF
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 33422 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 50602 MB
+# Available Virtual  : 48036 MB
+#-----------------------------------------------------------
+start_gui
+create_project DDS . -part xc7a35tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.2/data/ip'.
+file mkdir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new
+close [ open /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v w ]
+add_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe' provided. It will be converted relative to IP Instance files '../../../../../src/data.coe'
+INFO: [IP_Flow 19-3484] Absolute path of file '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe' provided. It will be converted relative to IP Instance files '../../../../../src/data.coe'
+INFO: [IP_Flow 19-3484] Absolute path of file '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe' provided. It will be converted relative to IP Instance files '../../../../../src/data.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name rom
+set_property -dict [list \
+  CONFIG.Coe_File {/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {64} \
+  CONFIG.Write_Width_A {8} \
+] [get_ips rom]
+INFO: [IP_Flow 19-3484] Absolute path of file '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe' provided. It will be converted relative to IP Instance files '../../../../../src/data.coe'
+generate_target {instantiation_template} [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rom'...
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/src/data.coe' provided. It will be converted relative to IP Instance files '../../../../../src/data.coe'
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rom'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rom'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rom'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rom'...
+catch { config_ip_cache -export [get_ips -all rom] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: rom
+export_ip_user_files -of_objects [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci]
+launch_runs rom_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: rom
+[Sun Mar  2 11:20:12 2025] Launched rom_synth_1...
+Run output will be captured here: /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.runs/rom_synth_1/runme.log
+export_simulation -lib_map_path [list {modelsim=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/modelsim} {questa=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/questa} {xcelium=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/xcelium} {vcs=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/vcs} {riviera=/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.cache/compile_simlib/riviera}] -of_objects [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/ip/rom/rom.xci] -directory /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.ip_user_files/sim_scripts -ip_user_files_dir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.ip_user_files -ipstatic_source_dir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+file mkdir /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v w ]
+add_files -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_singen'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_singen' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/rom.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_singen_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/sim/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module singen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_singen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'q' on this module [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:17]
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:16]
+ERROR: [VRFC 10-3180] cannot find port 'address' on this module [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:15]
+ERROR: [VRFC 10-8530] module 'blk_mem_gen_v8_4_9(C_FAMILY="artix7",C_XDEVICEFAMILY="artix7",C_ELABORATION_DIR="./",C_AXI_TYPE=1,C_MEM_TYPE=3,C_PRIM_TYPE=1,C_LOAD_INIT_FILE=1,C_INIT_FILE_NAME="rom.mif",C_INIT_FILE="rom.mem",C_WRITE_WIDTH_A=8,C_READ_WIDTH_A=8,C_ADDRA_WIDTH=6,C_INITB_VAL="0",C_HAS_ENB=0,C_WRITE_WIDTH_B=8,C_READ_WIDTH_B=8,C_ADDRB_WIDTH=6,C_HAS_MEM_OUTPUT_REGS_A=1,C_SIM_COLLISION_CHECK="ALL",C_COMMON_CLK=0,C_COUNT_36K_BRAM="0",C_COUNT_18K_BRAM="1",C_EST_POWER_SUMMARY="Estimated_Power_for_IP_____:_____2.3768_mW")' is ignored due to previous errors [/wrk/ci/prod/2024.2/sw/continuous/3059/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:3457]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_singen'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_singen' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/rom.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_singen_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/sim/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module singen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_singen
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9(C_FAMILY="art...
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.singen
+Compiling module xil_defaultlib.tb_singen
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_singen_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_singen_behav -key {Behavioral:sim_1:Functional:tb_singen} -tclbatch {tb_singen.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_singen.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_singen.U1.rom_inst.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_singen_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8087.438 ; gain = 91.605 ; free physical = 16546 ; free virtual = 40716
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_singen/U1/clk}} {{/tb_singen/U1/rst}} {{/tb_singen/U1/dataout}} {{/tb_singen/U1/addr}} {{/tb_singen/U1/clka}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_singen'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_singen' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim/rom.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_singen_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_singen'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_singen.U1.rom_inst.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+save_wave_config {/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg
+set_property xsim.view /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_singen'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_singen_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/sim/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module singen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_singen
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_singen'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_singen_behav xil_defaultlib.tb_singen xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9(C_FAMILY="art...
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.singen
+Compiling module xil_defaultlib.tb_singen
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_singen_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_singen.U1.rom_inst.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+save_wave_config {/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.gen/sources_1/ip/rom/rom.veo:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sim_1/new/tb_singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/DDS.srcs/sources_1/new/singen.v:]
+export_ip_user_files -of_objects  [get_files /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg
+remove_files  -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg
+WARNING: [Vivado 12-818] No files matched '/home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg'
