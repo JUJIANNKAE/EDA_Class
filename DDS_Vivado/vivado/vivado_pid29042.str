@@ -1044,3 +1044,4 @@ dismissDialog("Remove Sources"); // V (dialog28)
 // Tcl Message: remove_files  -fileset sim_1 /home/jk/Documents/FPGA/EDA_Class/DDS_Vivado/vivado/tb_singen_behav.wcfg 
 selectCodeEditor("singen.v", 87, 231); // ae (singen.v)
 // Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 56m:16s
+selectCodeEditor("singen.v", 194, 150); // ae (singen.v)
